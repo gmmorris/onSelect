@@ -34,7 +34,7 @@
 	            // support for modern browsers
 	            element.addEventListener ("mouseup", function () {
 	                var selection = document.getSelection();
-	                if(selection && !selection.isCollapsed()){
+	                if(selection && !selection.isCollapsed){
 	                    handler(element,selection);
 	                }
 	            });
