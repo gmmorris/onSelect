@@ -16,7 +16,7 @@
 	 * The top-level namespace
 	 * @namespace _onSelect
 	 */
-	var _onSelect = function(element,handler){
+	var _onSelect = function(element,handler,suppressEvents){
 	    //make sure the element is an HTML node and that the handler is a function
 	    if(!(element && element.nodeType === 1 && element.tagName)){
 	        throw new Error("onSelect: The supplied element argument is not an HTML element node");
@@ -32,20 +32,29 @@
 	    } else {
 	        if(document.getSelection){
 	            // support for modern browsers
-	            element.addEventListener ("mouseup", function () {
+	            element.addEventListener ("mouseup", function (e) {
 	                var selection = document.getSelection();
 	                if(selection && !selection.isCollapsed){
+						if(suppressEvents && e){
+							e.preventDefault();
+							e.stopPropagation();
+						}
+							
 	                    handler(element,selection);
 	                }
 	            });
 	        } else if(document.all) {
 	            // if document.getSelection isn't defined, this might be an older version of IE
 	            // check for that
-	            document.onmouseup = function(){
+	            document.onmouseup = function(e){
 	                // call handler, sending the selected content and element
 	                var selection = (document.selection? document.selection.createRange() : false);
 	                selection = (selection? selection.text : false);
 	                if(selection){
+						if(suppressEvents && e){
+							e.preventDefault();
+							e.stopPropagation();
+						}
 	                    handler(element,selection);
 	                }
 	            };
