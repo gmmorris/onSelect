@@ -1,0 +1,9 @@
+{
+	"name": "onSelect",
+	"version": "0.0.1",
+	"main": ["onSelect.js", "release/onSelect.min.js"],
+	"devDependencies": {
+	},
+	"ignore": [],
+	"keywords": ["select", "onSelect", "Dom Selection"]
+}
