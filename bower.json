@@ -1,6 +1,6 @@
 {
 	"name": "onSelect",
-	"version": "0.0.1",
+	"version": "0.0.5",
 	"main": ["onSelect.js", "release/onSelect.min.js"],
 	"devDependencies": {
 	},

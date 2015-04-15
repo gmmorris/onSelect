@@ -1,7 +1,7 @@
 /**
  * @name onSelect/addons/jquery.js
  * @author Gidi Meir Morris, 2015
- * @version 0.0.1
+ * @version 0.0.5
  *
  * onSelect extension to turn it to a jQuery addon and remove it from the global scope
  *

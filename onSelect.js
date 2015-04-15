@@ -1,7 +1,7 @@
 /**
  * @name onSelect.js
  * @author Gidi Meir Morris, 2015
- * @version 0.0.2
+ * @version 0.0.5
  *
  * onSelect A utility for listening for selection of text within different types of elements
  *
