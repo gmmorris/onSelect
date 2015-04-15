@@ -21,9 +21,9 @@
 	// remove _onSelect from the global object
 	var _onSelect = _onSelect.noConflict();
 	
-	_$.fn.onSelect = function(handler) {
+	_$.fn.onSelect = function(handler,suppressEvents) {
 	    return this.each(function() {
-	        _onSelect(this,handler);
+	        _onSelect(this,handler,suppressEvents);
 	    });
 	};
 })(window, document);
