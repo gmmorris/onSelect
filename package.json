@@ -1,7 +1,7 @@
 {
 	"name": "onSelect",
 	"description": "A utility for listening for selection of text within different types of elements",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"author": "Gidi Meir Morris",
 	"repository": {
 		"type": "git",

@@ -1,7 +1,7 @@
 /**
  * @name onSelect.js
  * @author Gidi Meir Morris, 2015
- * @version 0.0.1
+ * @version 0.0.2
  *
  * onSelect A utility for listening for selection of text within different types of elements
  *
@@ -34,7 +34,7 @@
 	            // support for modern browsers
 	            element.addEventListener ("mouseup", function () {
 	                var selection = document.getSelection();
-	                if(selection && selection.rangeCount){
+	                if(selection && !selection.isCollapsed()){
 	                    handler(element,selection);
 	                }
 	            });
